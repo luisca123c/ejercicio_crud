@@ -2,8 +2,8 @@ export const createUser = async (documento, nombre, genero, ciudad, correo) => {
   const post = await fetch(`http://localhost:3001/usuarios`, {
     method: `POST`,
     body: JSON.stringify({
-      documento: documento,
       nombre: nombre,
+      documento: documento,
       genero_id: genero,
       ciudad_id: ciudad,
       correo: correo

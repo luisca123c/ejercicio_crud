@@ -30,35 +30,19 @@
   "usuarios": [
     {
       "id": "1",
-      "documento": "123456789",
       "nombre": "John Doe",
+      "documento": "123456789",
       "genero_id": 1,
       "ciudad_id": 1,
       "correo": "correo@correo.com"
     },
     {
-      "id": "9519",
-      "documento": "12345678",
+      "id": "d269",
       "nombre": "Luis Carlos",
+      "documento": "12345678",
       "genero_id": "1",
       "ciudad_id": "1",
-      "correo": "luis@gmail.com"
-    },
-    {
-      "id": "932a",
-      "documento": "12345678",
-      "nombre": "darcy",
-      "genero_id": "2",
-      "ciudad_id": "2",
       "correo": "aada@gmail.com"
-    },
-    {
-      "id": "c6d9",
-      "documento": "100510736",
-      "nombre": "darcy",
-      "genero_id": "2",
-      "ciudad_id": "2",
-      "correo": "darcy@gmail.com"
     }
   ]
 }

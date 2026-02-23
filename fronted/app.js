@@ -2,7 +2,7 @@
 import { armarCiudades, armarGenero } from "./components/index.js";
 import { armarUsuarios } from "./components/usuarios.js";
 import { validar } from "./helpers/validarFormulario.js";
-import { ciudades, generos } from "./use-case/index.js";
+import { ciudades, eliminarUsuario, generos } from "./use-case/index.js";
 import { createUser } from "./use-case/usuarios/createUser.js";
 import { usuarios } from "./use-case/usuarios/getUsuarios.js";
 
@@ -90,4 +90,22 @@ formulario.addEventListener("submit", async (e) => {
   createUser(documento, nombre, genero, ciudad, correo)
   let datosUsuarios = await usuarios();
   armarUsuarios(ussers, datosUsuarios);
+  formulario.reset();
 });
+
+ussers.addEventListener("click", async (e) => {
+  //detectar que boton se presiono
+  const btnEliminar = e.target.closest(".btnEliminar");
+  const btnEditar = e.target.closest(".btnEnviar");
+  //buscar la id del usuario
+  const card = e.target.closest(".card");
+  const id = card ? card.querySelector(".id").textContent : null;
+  console.log(id);
+  if (btnEliminar && id)
+  {
+    const card = btnEliminar.closest(".card");
+    eliminarUsuario(id);
+    let datosUsuarios = await usuarios();
+    eliminarUsuario(ussers, datosUsuarios);
+  }
+})

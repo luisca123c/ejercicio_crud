@@ -84,7 +84,35 @@ form select {
   border-radius: 12px;
   padding: 18px;
 }
-#usuarios div{
+.card{
   background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+}
+.card p {
   text-align: center;
+}
+.card button{
+  align-items: left;
+}
+.btnEliminar{
+  color: red;
+  font-size: 30px;
+  padding: 5px;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+}
+.btnEditar{
+  border: none;
+  background-color: rgb(4, 4, 187);
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.id{
+  display: none;
 }
